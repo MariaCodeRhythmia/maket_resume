@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <div class="page">
+      <main class="content">
+        <header class="menu">
+          <a href="index.html" class="logoMenu text">Ведерникова</a>
+          <a href="index.html">
+            <img src="img/home.png" alt="" class="logoMenu icon">
+          </a>
+          <div class="menuIcon">
+            <span></span>
+          </div>
+          <ul class="textMenu">
+            <li class="btn"><a href="experience.html">Опыт</a></li>
+            <li class="btn"><a href="about.html">О себе</a></li>
+            <li class="btn"><a href="projects.html">Проекты</a></li>
+            <li class="btn"><a href="education.html">Обучение</a></li>
+          </ul>
+          <div class="connection">
+            <a href="tel:+79046129863">
+              <img src="img/tel.png" alt="" class="icon">
+            </a>
+            <a href="mailto:maria.npk4@mail.ru">
+              <img src="img/email.png" alt="" class="icon">
+            </a>
+          </div>
+        </header>
+        <div class="mainContent">
+          <div class="textTitle">
+            <h1>Пример простого Telegram-бота</h1>
+          </div>
+          <section class="textContentProject">
+            <div class="projectText">
+              <p>Цель разработки проекта - получение навыков работы с асинхронном программированием в Node.js с применением промисов.</p>
+              <p>Задачей приложения является генерация случайных изображений и отправка их в чат Telegram.</p>
+              <p>Данный код представляет собой пример простого Telegram-бота, написанного с использованием библиотеки node-telegram-bot-api и языка JavaScript.</p>
+              <p>Для реализацией задачи этого приложения выбран способ получения двух случайных изображений с помощью API Unsplash и написана функция blendImages, которая реализует алгоритм смешивания двух изображений с использованием пирамиды изображений и маски.</p>
+              <p>Для обработки асинхронных операций, таких как HTTP-запросы и работа с файлами, используются промисы. Благодаря этому, код становится более удобочитаемым и позволяет управлять последовательностью выполнения операций.</p>
+            </div>
+            <div class="projectlImg long">
+              <div class="slides">
+                <img id="slide-1" src="img/botLogo.jpg">
+                <img id="slide-2" src="img/bot1.jpg">
+                <img id="slide-3" src="img/bot2.jpg">
+              </div>
+              <a href="#slide-1">1</a>
+              <a href="#slide-2">2</a>
+              <a href="#slide-3">3</a>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="containerFooter">
+        footer
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,475 @@
+
+/*-------------SHARED---------------------------------------------------------*/
+* {
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  max-width: 1200px;
+  color: gray;
+  font-size: 0.87em;
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 3em;
+  letter-spacing: 0.15em;
+  background: #ECEAE6;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3%;
+  flex: 1 1 auto;
+}
+
+.contentBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+h1 {
+  font-size: 14px;
+  width: 100%;
+  margin: .7em auto;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1:before, h1:after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  margin: 0 .5em 0 -55%;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.8);
+}
+
+h1:after {
+  margin: 0 -55% 0 .5em;
+}
+
+/*------------HEADER--------------*/
+.menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  top: 2%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  max-height: 100px;
+  max-width: 1200px;
+  background: rgba(236, 234, 230, .87);
+}
+
+.mainContent {
+  padding: 90px 0 10px 0;
+  flex: 1 1 auto;
+}
+
+.textMenu {
+  display: flex;
+  align-items: center;
+  margin: 5px 5px;
+}
+
+.logoMenu {
+  display: inline-block;
+  padding: 2% 5px;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 2px 15px;
+  color: gray;
+}
+
+.icon {
+  padding: .4em;
+}
+
+.logoMenu.icon {
+  display: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.logoMenu:hover {
+  color: white;
+}
+
+.menu li:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: gray
+}
+
+.textTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+.connection{
+  display: flex;
+  align-items: center;
+}
+
+/* ----------FOTER------------- */
+.containerFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------*/
+/*-------------------MAIN--------------------------------------------*/
+.mainInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.mainImg {
+  width: 40%;
+  float: right;
+  padding: 1%;
+}
+.marker {
+  font-weight: 900;
+  font-size: 1.1em;
+}
+/*----------------------------------------------------------------------------*/
+/*---TEXT CONTENT-------------------------------------------------------------*/
+.textContent {
+  display: flex;
+  justify-content: center;
+  padding: 15px 10px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.textContentText {
+  text-align: center;
+}
+.introduction {
+  align-items: center;
+}
+.introduction, .skills {
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+}
+.mainMarker{
+max-width: 78%;
+}
+ .skillsHard, .skillsSoft {
+  max-width: 48%;
+}
+.textContentProject {
+  display: flex;
+  flex-direction: row;
+}
+
+.TextContentBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.projectMarkers {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+}
+
+.education, .experience {
+  padding: 0 3%;
+}
+.projectText p, .about p, .education p{
+  text-indent: 2em; /* Отступ первой строки */
+}
+
+/*----------------Project Multimedia---------------------------*/
+.slides {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slides>video, .slides>img {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  margin-right: 50px;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.projectlImg {
+  width: 100%;
+}
+.projectlImg.long {
+  width: 30%;
+}
+.projectText{
+  width:100%;
+  padding: 1%;
+}
+/*----------------------------------------------------------------------------*/
+/*-------------------------card_content----------------------------------------*/
+.cardWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.card {
+  box-shadow: 20px 20px 60px #c9c7c4, -20px -20px 60px #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.card:hover {
+  background: #c9c7c4;
+  box-shadow: 7px 7px 5px #c9c7c4, -7px -7px 5px #ffffff;
+}
+
+.cardLogo {
+  height: 13em;
+  border-radius: 3px;
+}
+
+.cardTitle {
+  text-align: center;
+  font-weight: 800;
+}
+
+.cardText {
+  text-align: center;
+  font-weight: 200;
+}
+
+/*------------------------contacts--------------------------------------------*/
+form {
+  width: 70%;
+  margin: 60px auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.34);
+  box-shadow: 20px 20px 40px #c9c7c4, -20px -20px 40px #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  background: white;
+  padding: 20px 10px;
+  display: block;
+  width: 90%;
+  border-radius: 5px;
+  margin: 10px;
+  border: none;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 2.5em;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input.button {
+  box-shadow: 1px 1px 5px #c9c7c4, -1px -1px 5px #ffffff;
+  color: gray;
+}
+
+.input.button:hover {
+  box-shadow: 1px 1px 5px #333, -1px -1px 5px #ffffff;
+  color: rgb(0, 131, 187);
+}
+
+.input:hover {
+  box-shadow: 1px 1px 5px #c9c7c4, -1px -1px 5px #ffffff;
+  border-radius: 4px;
+  outline: none;
+}
+
+.mOver {
+  margin: 5px;
+  box-shadow: 9px 9px 10px #65615b, -9px -9px 10px #ffffff;
+}
+
+
+@media (max-width: 800px) {
+
+    .projectlImg {
+      width: 70%;
+      padding: 20px;
+      align-self: center;
+    }
+    .projectlImg.long {
+      width: 40%;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+      }
+    .menuIcon{
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 20px;
+        cursor: pointer;
+        left: 0;
+        margin: 10px;
+    }
+    .menuIcon span,
+    .menuIcon::before,
+    .menuIcon::after{
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: gray;
+    }
+    .menuIcon::before,
+    .menuIcon::after{
+        content: "";
+    }
+    .menuIcon::before{
+        top: 0;
+    }
+    .menuIcon::after{
+        bottom: 0;
+    }
+    .menuIcon span{
+        top: 50%;
+        transition: scale(1) translate(1px, -50%);
+    }
+    .textMenu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        background:  rgba(236, 234, 230, 0.77);
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+    .textMenu.activ{
+        left: 0;
+    }
+    .textMenu > li:last-child {
+        margin-bottom: 0;
+    }
+    .btn{
+        margin: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+    .logoMenu.text{
+      display: none;
+    }
+    .logoMenu.icon{
+      display: block;
+    }
+    .menuIcon.activ span{
+        top: 50%;
+        transform: scale(0) translate(0px, -50%);
+    }
+    .menuIcon.activ::before{
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menuIcon.activ::after{
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+    .introduction, .skills{
+      flex-direction: column-reverse;
+    }
+    .mainImg{
+      display: none;
+    }
+    .introductionText,.skillsHard,.skillsSoft{
+      max-width:90%;
+    }
+    .textContentProject{
+      flex-direction: column-reverse;
+    }
+    .mainInfo {
+      flex-direction: column-reverse;
+      justify-content: center;
+      }
+    .containerFooter{
+      flex-direction: column;
+    }
+
+}
